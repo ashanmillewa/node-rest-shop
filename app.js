@@ -8,7 +8,9 @@ const mongoose = require('mongoose');
 const productRoutes = require('./api/routes/products')
 const orderRoutes = require('./api/routes/orders')
 
-mongoose.connect('mongodb+srv://ASHANMILLEWA:11AIM2000@node-rest-shop.kt3y0.mongodb.net/node-rest-shop')
+mongoose.connect('mongodb+srv://ASHANMILLEWA:11AIM2000@node-rest-shop.kt3y0.mongodb.net/node-rest-shop');
+
+mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
